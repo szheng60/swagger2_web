@@ -1,0 +1,5 @@
+$ git init                            			#initialize the empty local repo
+$ git remote add origin -f <git url>			#add the remote origin
+$ git config core.sparsecheckout true			#very crucial. this is where we tell git we are checking out specifics
+$ echo "distribution/src/main/release/samples/jax_rs/description_swagger2_web/*" >> .git/info/sparse-checkout #recursively checkout examples folder
+$ git pull --depth=2 origin master			#go only 2 depths down the examples directory
